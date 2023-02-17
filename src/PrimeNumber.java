@@ -9,6 +9,7 @@ public class PrimeNumber {
         boolean[] prime = new boolean[num];
         Arrays.fill(prime, true);
         int i;
+        // Sieve of Eratosthenes
         if (num > 1) {
             prime[1] = false;
 
@@ -20,6 +21,7 @@ public class PrimeNumber {
                 }
             }
         }
+        //array output
         System.out.println("Prime Number:");
         for(i = 1; i < num; ++i) {
             if (prime[i]) {

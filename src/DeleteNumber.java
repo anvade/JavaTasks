@@ -2,12 +2,12 @@ import java.util.Random;
 
 public class DeleteNumber {
     public static void main(String[] args) {
-        System.out.println("Enter massive size:");
-
         java.util.Scanner sc = new java.util.Scanner(System.in);
+        Random rd = new Random();
+        System.out.println("Enter massive size:");
         int num = sc.nextInt();
         int[] mas = new int[num];
-        Random rd = new Random();
+        // filling the array
         for(int i = 0;i < num;i++){
             mas[i]= rd.nextInt(25);
             System.out.printf("%d \t",mas[i]);
@@ -15,6 +15,7 @@ public class DeleteNumber {
         System.out.println("\nEnter number. It will be deleted");
         int del = sc.nextInt();
         int sizeRez = num;
+        // deleting and shifting numbers
         for(int j=0;j<sizeRez;j++){
             if(del==mas[j]){
                 for(int k=j;k<sizeRez-1;k++)
@@ -26,6 +27,7 @@ public class DeleteNumber {
                 j--;
             }
         }
+        //array output
         for(int k : mas){
             System.out.printf("%d \t",k);
         }
